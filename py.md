@@ -1,6 +1,3 @@
-
-
-
 # python语法
 ##  函数
 ### 函数的多返回值
@@ -88,6 +85,47 @@ test_func(lambda x,y : x+y)   #结果是3
 ```
 ## python的文件操作
 ### 一.文件编码
+编码技术：翻译的规则，记录了如何将内容翻译成二进制，如UTF-8
+### 二.文件读取操作
+####
+1.open()打开函数
+语法：open(name,mode,encoding)
+``` python
+f=open("python.txt",'r',encoding="UTF-8")
+#r：只读  
+#w：只写，如果文件存在，删除原有内容从头写，不存在则创建一个
+#a: 追加，文件存在则在后面加内容，不存在创建并写入
+```
+2.read()方法
+语法： 文件对象.read(num) 
+num表示读取的长度，单位：字节，默认全读取
+
+3.readlines() 方法
+按照行的方式一次读取文件内容，返回一个列表
+
+4.readline() 方法
+一次读取一行的数据
+
+5.for循环读取
+``` python
+for line in open("python.txt","r"):
+    print(line)
+```
+6.close()关闭文件
+``` python
+f=open("python.txt","r")
+f.close()
+```
+7.with open语法:文件自动关闭
+``` python
+with open("python.txt",'r',encoding="UTF-8") as f:
+    for line in f:
+        print(line)
+```
+### 三.文件的写入
+####
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzU2NzEwMTZdfQ==
+eyJoaXN0b3J5IjpbLTEyODQ1Mjk1ODIsLTE0NzU2NzEwMTZdfQ
+==
 -->
