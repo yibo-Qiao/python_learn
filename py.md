@@ -124,8 +124,24 @@ with open("python.txt",'r',encoding="UTF-8") as f:
 ```
 ### 三.文件的写入
 ####
+``` python
+#打开文件
+f=open("python.txt","w")
+#写入
+f.write("Hello World")   #写入缓存区，还未真正写入文件
+f.flush()  #内容刷新
+```
+### 四.文件的追加
+####
+``` python
+#打开文件
+f=open("python.txt","a")
+#写入
+f.write("Hello World")   #写入缓存区，还未真正写入文件
+f.flush()  #内容刷新
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODQ1Mjk1ODIsLTE0NzU2NzEwMTZdfQ
-==
+eyJoaXN0b3J5IjpbLTEwMjk3ODM5NzQsLTEyODQ1Mjk1ODIsLT
+E0NzU2NzEwMTZdfQ==
 -->
